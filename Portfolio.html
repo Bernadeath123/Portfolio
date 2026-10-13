@@ -1,0 +1,1504 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <meta name="description" content="Professional portfolio of Bernadeth M. Cornelio, a Financial Management student and READS Scholar at the University of San Jose-Recoletos.">
+
+  <title>Bernadeth M. Cornelio | Portfolio</title>
+
+  <style>
+    /* =================================
+       1. COLOR PALETTE AND GLOBAL STYLES
+    ================================= */
+
+    :root {
+      --navy: #14263d;
+      --navy-light: #203b59;
+      --gold: #b9975b;
+      --gold-light: #e4c990;
+      --cream: #f7f5ef;
+      --white: #ffffff;
+      --text: #303a46;
+      --muted: #737c87;
+      --border: #e5e2da;
+      --shadow: 0 12px 35px rgba(20, 38, 61, 0.08);
+    }
+
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      scroll-behavior: smooth;
+    }
+
+    body {
+      font-family: "Segoe UI", Arial, sans-serif;
+      background: var(--cream);
+      color: var(--text);
+      line-height: 1.7;
+    }
+
+    img {
+      max-width: 100%;
+    }
+
+    a {
+      color: inherit;
+      text-decoration: none;
+    }
+
+    .container {
+      width: min(1120px, 90%);
+      margin: auto;
+    }
+
+    .section {
+      padding: 90px 0;
+      scroll-margin-top: 85px;
+    }
+
+    .section-label {
+      color: var(--gold);
+      text-transform: uppercase;
+      letter-spacing: 3px;
+      font-size: 0.76rem;
+      font-weight: 700;
+      margin-bottom: 10px;
+    }
+
+    .section-title {
+      color: var(--navy);
+      font-family: Georgia, "Times New Roman", serif;
+      font-size: clamp(2rem, 4vw, 2.8rem);
+      line-height: 1.2;
+      margin-bottom: 18px;
+    }
+
+    .section-intro {
+      color: var(--muted);
+      max-width: 700px;
+      margin-bottom: 40px;
+    }
+
+    .gold-line {
+      width: 55px;
+      height: 3px;
+      background: var(--gold);
+      margin: 22px 0;
+    }
+
+    /* =================================
+       2. NAVIGATION BAR
+    ================================= */
+
+    header {
+      background: rgba(255, 255, 255, 0.97);
+      border-bottom: 1px solid var(--border);
+      position: sticky;
+      top: 0;
+      z-index: 1000;
+      backdrop-filter: blur(12px);
+    }
+
+    nav {
+      min-height: 76px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 24px;
+    }
+
+    .logo {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  text-decoration: none;
+  color: white;
+}
+
+.logo-image {
+  width: 60px;
+  height: 60px;
+  object-fit: contain;
+  border-radius: 50%;
+}
+
+    .nav-links {
+      display: flex;
+      align-items: center;
+      gap: 25px;
+      list-style: none;
+    }
+
+    .nav-links a {
+      font-size: 0.88rem;
+      color: var(--navy);
+      transition: color 0.25s;
+    }
+
+    .nav-links a:hover {
+      color: var(--gold);
+    }
+
+    .nav-contact {
+      border: 1px solid var(--gold);
+      padding: 9px 17px;
+      border-radius: 3px;
+    }
+
+    .menu-toggle {
+      display: none;
+      background: none;
+      border: none;
+      color: var(--navy);
+      font-size: 1.7rem;
+      cursor: pointer;
+    }
+
+    /* =================================
+       3. HERO / HOME SECTION
+    ================================= */
+
+    .hero {
+      background:
+        radial-gradient(
+          ellipse at 90% 10%,
+          #294665 0%,
+          transparent 42%
+        ),
+        var(--navy);
+
+      color: var(--white);
+      padding: 105px 0 110px;
+      overflow: hidden;
+      position: relative;
+    }
+
+    .hero::after {
+      content: "";
+      position: absolute;
+      width: 400px;
+      height: 400px;
+      border: 1px solid rgba(185, 151, 91, 0.24);
+      border-radius: 50%;
+      right: -160px;
+      bottom: -220px;
+
+      box-shadow:
+        0 0 0 45px rgba(185, 151, 91, 0.04),
+        0 0 0 90px rgba(185, 151, 91, 0.03);
+
+      pointer-events: none;
+    }
+
+    .hero-content {
+      display: grid;
+      grid-template-columns: 1.5fr 0.8fr;
+      align-items: center;
+      gap: 70px;
+      position: relative;
+      z-index: 1;
+    }
+
+    .hero-tag {
+      color: var(--gold-light);
+      text-transform: uppercase;
+      font-size: 0.8rem;
+      letter-spacing: 3px;
+      margin-bottom: 20px;
+    }
+
+    .hero h1 {
+      font-family: Georgia, "Times New Roman", serif;
+      font-size: clamp(2.8rem, 6vw, 4.7rem);
+      line-height: 1.08;
+      font-weight: 500;
+      margin-bottom: 25px;
+    }
+
+    .hero h1 span {
+      color: #d8bb84;
+    }
+
+    .hero-description {
+      color: #d3dbe4;
+      max-width: 590px;
+      font-size: 1.04rem;
+      margin-bottom: 32px;
+    }
+
+    .hero-buttons {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 14px;
+    }
+
+    .btn {
+      display: inline-flex;
+      justify-content: center;
+      align-items: center;
+      padding: 13px 22px;
+      border: 1px solid transparent;
+      border-radius: 3px;
+      font-size: 0.9rem;
+      font-weight: 600;
+      cursor: pointer;
+      transition: 0.25s;
+    }
+
+    .btn-gold {
+      background: var(--gold);
+      color: #17263a;
+    }
+
+    .btn-gold:hover {
+      background: #d2b47b;
+      transform: translateY(-2px);
+    }
+
+    .btn-outline {
+      border-color: rgba(255, 255, 255, 0.55);
+      color: white;
+    }
+
+    .btn-outline:hover {
+      border-color: var(--gold);
+      color: var(--gold-light);
+    }
+
+    /* PROFILE PHOTO */
+
+    .hero-card {
+      border: 1px solid rgba(255, 255, 255, 0.2);
+      background: rgba(255, 255, 255, 0.055);
+      padding: 38px 30px;
+      text-align: center;
+      border-radius: 5px;
+      backdrop-filter: blur(8px);
+    }
+
+    .profile-photo {
+      width: 180px;
+      height: 180px;
+      margin: 0 auto 25px;
+      border: 3px solid var(--gold);
+      border-radius: 50%;
+      padding: 5px;
+      overflow: hidden;
+      background: var(--white);
+      box-shadow: 0 8px 30px rgba(0, 0, 0, 0.18);
+    }
+
+    .profile-photo img {
+      width: 100%;
+      height: 100%;
+      display: block;
+      object-fit: cover;
+      object-position: center top;
+      border-radius: 50%;
+    }
+
+    .hero-card h2 {
+      font-family: Georgia, "Times New Roman", serif;
+      font-size: 1.4rem;
+      font-weight: 500;
+      margin-bottom: 7px;
+    }
+
+    .hero-card p {
+      color: #cbd5df;
+      font-size: 0.88rem;
+    }
+
+    .hero-card .gold-line {
+      margin: 20px auto;
+    }
+
+    .hero-card .small-detail {
+      color: var(--gold-light);
+      font-size: 0.75rem;
+      letter-spacing: 1.5px;
+      text-transform: uppercase;
+    }
+
+    /* =================================
+       4. ABOUT ME
+    ================================= */
+
+    .about-grid {
+      display: grid;
+      grid-template-columns: 0.8fr 1.2fr;
+      gap: 65px;
+      align-items: start;
+    }
+
+    .about-panel {
+      background: var(--navy);
+      color: white;
+      padding: 36px;
+      border-radius: 4px;
+      box-shadow: var(--shadow);
+    }
+
+    .about-panel h3 {
+      color: var(--gold-light);
+      font-family: Georgia, "Times New Roman", serif;
+      font-size: 1.5rem;
+      margin-bottom: 20px;
+    }
+
+    .about-detail {
+      display: flex;
+      gap: 13px;
+      margin: 20px 0;
+      align-items: flex-start;
+    }
+
+    .detail-symbol {
+      color: var(--gold-light);
+      font-size: 1.1rem;
+      min-width: 24px;
+    }
+
+    .about-detail small {
+      display: block;
+      color: #c4d0dc;
+      font-size: 0.75rem;
+    }
+
+    .about-detail p {
+      font-size: 0.9rem;
+      overflow-wrap: anywhere;
+    }
+
+    .about-detail a:hover {
+      color: var(--gold-light);
+    }
+
+    .about-text p {
+      margin-bottom: 18px;
+      color: #596574;
+    }
+
+    .about-text strong {
+      color: var(--navy);
+    }
+
+    .highlight-note {
+      border-left: 3px solid var(--gold);
+      padding: 16px 20px;
+      background: #eeebe3;
+      color: var(--navy);
+      margin-top: 25px;
+      font-family: Georgia, "Times New Roman", serif;
+      font-style: italic;
+    }
+
+    /* =================================
+       5. WORK EXPERIENCE
+    ================================= */
+
+    .experience-section {
+      background: #eeece5;
+    }
+
+    .experience-card {
+      background: white;
+      border: 1px solid var(--border);
+      padding: 35px;
+      border-radius: 4px;
+      box-shadow: var(--shadow);
+    }
+
+    .experience-header {
+      display: flex;
+      justify-content: space-between;
+      gap: 20px;
+      flex-wrap: wrap;
+      border-bottom: 1px solid var(--border);
+      padding-bottom: 25px;
+      margin-bottom: 30px;
+    }
+
+    .experience-header h3 {
+      color: var(--navy);
+      font-size: 1.35rem;
+      margin-bottom: 6px;
+    }
+
+    .experience-header p {
+      color: var(--muted);
+      font-size: 0.92rem;
+    }
+
+    .date-tag {
+      align-self: flex-start;
+      padding: 7px 13px;
+      color: #735b30;
+      background: #f4eddd;
+      font-size: 0.82rem;
+      font-weight: 700;
+      border-radius: 3px;
+    }
+
+    .experience-groups {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 32px;
+    }
+
+    .experience-group h4 {
+      color: var(--navy);
+      font-size: 1.04rem;
+      margin-bottom: 15px;
+    }
+
+    .experience-group ul {
+      padding-left: 19px;
+      color: #596574;
+    }
+
+    .experience-group li {
+      margin-bottom: 11px;
+      padding-left: 4px;
+      font-size: 0.91rem;
+    }
+
+    .experience-group li::marker {
+      color: var(--gold);
+    }
+
+    /* =================================
+       6. EDUCATION AND ACHIEVEMENTS
+    ================================= */
+
+    .education-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 24px;
+    }
+
+    .education-card {
+      border: 1px solid var(--border);
+      background: white;
+      padding: 30px;
+      border-radius: 4px;
+      transition: transform 0.25s, box-shadow 0.25s;
+    }
+
+    .education-card:hover {
+      transform: translateY(-5px);
+      box-shadow: var(--shadow);
+    }
+
+    .education-icon {
+      color: var(--gold);
+      font-size: 1.8rem;
+      margin-bottom: 18px;
+    }
+
+    .education-card .year {
+      color: var(--gold);
+      font-size: 0.8rem;
+      font-weight: 700;
+      letter-spacing: 1px;
+    }
+
+    .education-card h3 {
+      color: var(--navy);
+      font-family: Georgia, "Times New Roman", serif;
+      font-size: 1.35rem;
+      margin: 10px 0;
+    }
+
+    .education-card p {
+      color: var(--muted);
+      font-size: 0.9rem;
+    }
+
+    .achievement {
+      margin-top: 20px;
+      padding-top: 17px;
+      border-top: 1px solid var(--border);
+      color: #735b30;
+      font-size: 0.88rem;
+      font-weight: 600;
+    }
+
+    .achievement p {
+      margin-top: 8px;
+    }
+
+    /* =================================
+       7. SKILLS AND COMPETENCIES
+    ================================= */
+
+    .skills-section {
+      background: var(--navy);
+      color: white;
+    }
+
+    .skills-section .section-title {
+      color: white;
+    }
+
+    .skills-section .section-intro {
+      color: #cbd5df;
+    }
+
+    .skills-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 20px;
+    }
+
+    .skill-card {
+      border: 1px solid rgba(255, 255, 255, 0.14);
+      background: rgba(255, 255, 255, 0.045);
+      padding: 26px;
+      border-radius: 4px;
+      transition: 0.25s;
+    }
+
+    .skill-card:hover {
+      border-color: var(--gold);
+      background: rgba(255, 255, 255, 0.075);
+      transform: translateY(-3px);
+    }
+
+    .skill-number {
+      color: var(--gold-light);
+      font-size: 0.8rem;
+      letter-spacing: 2px;
+      margin-bottom: 12px;
+    }
+
+    .skill-card h3 {
+      font-family: Georgia, "Times New Roman", serif;
+      font-size: 1.2rem;
+      margin-bottom: 15px;
+    }
+
+    .skill-card ul {
+      list-style: none;
+    }
+
+    .skill-card li {
+      color: #d0d9e3;
+      font-size: 0.88rem;
+      margin: 9px 0;
+    }
+
+    .skill-card li::before {
+      content: "— ";
+      color: var(--gold);
+    }
+
+    /* =================================
+       8. CONTACT SECTION
+    ================================= */
+
+    .contact-wrap {
+      background: white;
+      padding: 48px;
+      border: 1px solid var(--border);
+      box-shadow: var(--shadow);
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 40px;
+      border-radius: 4px;
+    }
+
+    .contact-wrap h3 {
+      color: var(--navy);
+      font-family: Georgia, "Times New Roman", serif;
+      font-size: 1.6rem;
+      margin-bottom: 15px;
+    }
+
+    .contact-wrap p {
+      color: var(--muted);
+      margin-bottom: 20px;
+    }
+
+    .contact-item {
+      padding: 15px 0;
+      border-bottom: 1px solid var(--border);
+    }
+
+    .contact-item:last-child {
+      border-bottom: none;
+    }
+
+    .contact-item small {
+      color: var(--gold);
+      display: block;
+      text-transform: uppercase;
+      letter-spacing: 1px;
+      font-weight: 700;
+      font-size: 0.72rem;
+    }
+
+    .contact-item a,
+    .contact-item span {
+      color: var(--navy);
+      overflow-wrap: anywhere;
+      font-size: 0.92rem;
+    }
+
+    .contact-item a:hover {
+      color: var(--gold);
+    }
+
+    .contact-cta {
+      background: var(--navy);
+      color: white;
+      padding: 35px;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: flex-start;
+      border-radius: 4px;
+    }
+
+    .contact-cta h3 {
+      color: white;
+    }
+
+    .contact-cta p {
+      color: #d0d9e3;
+    }
+
+    /* =================================
+       9. FOOTER
+    ================================= */
+
+    footer {
+      background: #0c1929;
+      color: #cbd5df;
+      padding: 25px 0;
+      font-size: 0.82rem;
+    }
+
+    .footer-content {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      gap: 15px;
+      flex-wrap: wrap;
+    }
+
+    .footer-content strong {
+      color: var(--gold-light);
+    }
+
+    /* =================================
+       10. RESPONSIVE DESIGN
+    ================================= */
+
+    @media (max-width: 850px) {
+      .hero-content {
+        grid-template-columns: 1fr;
+        gap: 45px;
+      }
+
+      .hero-card {
+        max-width: 400px;
+      }
+
+      .about-grid {
+        grid-template-columns: 1fr;
+        gap: 35px;
+      }
+
+      .skills-grid {
+        grid-template-columns: repeat(2, 1fr);
+      }
+
+      .nav-links {
+        gap: 14px;
+      }
+
+      .nav-links a {
+        font-size: 0.8rem;
+      }
+    }
+
+    @media (max-width: 650px) {
+      .section {
+        padding: 65px 0;
+      }
+
+      nav {
+        min-height: 68px;
+      }
+
+      .menu-toggle {
+        display: block;
+      }
+
+      .nav-links {
+        display: none;
+        position: absolute;
+        top: 68px;
+        left: 0;
+        right: 0;
+        padding: 20px 5%;
+        background: white;
+        border-bottom: 1px solid var(--border);
+        flex-direction: column;
+        align-items: stretch;
+        gap: 16px;
+      }
+
+      .nav-links.open {
+        display: flex;
+      }
+
+      .nav-links a {
+        display: block;
+        font-size: 0.95rem;
+      }
+
+      .nav-contact {
+        text-align: center;
+      }
+
+      .hero {
+        padding: 75px 0;
+      }
+
+      .hero h1 {
+        font-size: 2.9rem;
+      }
+
+      .experience-groups,
+      .education-grid,
+      .skills-grid,
+      .contact-wrap {
+        grid-template-columns: 1fr;
+      }
+
+      .experience-card,
+      .contact-wrap {
+        padding: 25px;
+      }
+
+      .about-panel {
+        padding: 28px;
+      }
+
+      .hero-buttons .btn {
+        width: 100%;
+      }
+
+      .footer-content {
+        flex-direction: column;
+        text-align: center;
+      }
+
+      .profile-photo {
+        width: 160px;
+        height: 160px;
+      }
+    }
+
+    @media (prefers-reduced-motion: reduce) {
+      *,
+      *::before,
+      *::after {
+        scroll-behavior: auto !important;
+        transition: none !important;
+      }
+    }
+  </style>
+</head>
+
+<body>
+
+  <!-- =================================
+       NAVIGATION
+  ================================== -->
+
+  <header>
+    <nav class="container" aria-label="Main navigation">
+
+      <a href="#home" class="logo">
+  <img src="BC.jpg" class="logo-image">
+  <span>Bernadeth M. Cornelio</span>
+</a>
+
+      <button
+        class="menu-toggle"
+        id="menuToggle"
+        aria-label="Open navigation menu"
+        aria-expanded="false"
+        aria-controls="navLinks">
+        ☰
+      </button>
+
+      <ul class="nav-links" id="navLinks">
+        <li><a href="#home">Home</a></li>
+        <li><a href="#about">About</a></li>
+        <li><a href="#experience">Experience</a></li>
+        <li><a href="#education">Education</a></li>
+        <li><a href="#skills">Skills</a></li>
+        <li>
+          <a href="#contact" class="nav-contact">Contact Me</a>
+        </li>
+      </ul>
+
+    </nav>
+  </header>
+
+  <main>
+
+    <!-- =================================
+         HOME SECTION
+    ================================== -->
+
+    <section class="hero" id="home">
+
+      <div class="container hero-content">
+
+        <div>
+          <p class="hero-tag">Personal Portfolio · 2026</p>
+
+          <h1>
+            Bernadeth M.<br>
+            <span style="color: white;">Cornelio</span>
+          </h1>
+
+          <div class="gold-line"></div>
+
+          <p class="hero-description">
+            A dedicated Financial Management student and READS Scholar
+            committed to organized administration, effective communication,
+            and professional excellence.
+          </p>
+
+          <div class="hero-buttons">
+            <a href="#experience" class="btn btn-gold">
+              Explore My Experience
+            </a>
+
+            <a href="#contact" class="btn btn-outline">
+              Get in Touch
+            </a>
+          </div>
+        </div>
+
+        <!-- PROFILE IMAGE -->
+        <div class="hero-card">
+
+          <div class="profile-photo">
+            <img
+              src="profile.png"
+              alt="Professional portrait of Bernadeth M. Cornelio">
+          </div>
+
+          <h2>Bernadeth M. Cornelio</h2>
+
+          <p>Business Administration</p>
+          <p>Major in Financial Management</p>
+
+          <div class="gold-line"></div>
+
+          <p class="small-detail">
+            Organized · Dedicated · Growth-Oriented
+          </p>
+
+        </div>
+
+      </div>
+
+    </section>
+
+    <!-- =================================
+         ABOUT ME SECTION
+    ================================== -->
+
+    <section class="section" id="about">
+
+      <div class="container about-grid">
+
+        <aside class="about-panel">
+
+          <h3>Personal Information</h3>
+
+          <div class="about-detail">
+            <span class="detail-symbol" aria-hidden="true">⌖</span>
+            <div>
+              <small>Location</small>
+              <p>Bacayan, Cebu City, 6000</p>
+            </div>
+          </div>
+
+          <div class="about-detail">
+            <span class="detail-symbol" aria-hidden="true">✆</span>
+            <div>
+              <small>Contact Number</small>
+              <p>
+                <a href="tel:+639945795509">09945795509</a>
+              </p>
+            </div>
+          </div>
+
+          <div class="about-detail">
+            <span class="detail-symbol" aria-hidden="true">✉</span>
+            <div>
+              <small>Email Address</small>
+              <p>
+                <a href="mailto:bernadeth.cornelio.23@usjr.edu.ph">
+                  bernadeth.cornelio.23@usjr.edu.ph
+                </a>
+              </p>
+            </div>
+          </div>
+
+          <div class="about-detail">
+            <span class="detail-symbol" aria-hidden="true">✧</span>
+            <div>
+              <small>Current Institution</small>
+              <p>University of San Jose–Recoletos</p>
+            </div>
+          </div>
+
+        </aside>
+
+        <div class="about-text">
+
+          <p class="section-label">Get to Know Me</p>
+
+          <h2 class="section-title">About Me</h2>
+
+          <div class="gold-line"></div>
+
+          <p>
+            I am an organized and detail-oriented student pursuing a
+            <strong>Bachelor of Science in Business Administration,
+            major in Financial Management</strong> at the University of
+            San Jose–Recoletos.
+          </p>
+
+          <p>
+            As a READS Scholar assigned to the School of Business and
+            Management, I have gained practical experience in administrative
+            operations, document management, confidential records handling,
+            fund request processing, and event coordination.
+          </p>
+
+          <p>
+            My responsibilities have strengthened my ability to work with
+            faculty members, students, and organizations while maintaining
+            professionalism, accuracy, and confidentiality. I am also
+            proficient in Microsoft Office, Google Workspace, Gmail, and Canva.
+          </p>
+
+          <p>
+            I value continuous learning, teamwork, and efficient work practices.
+            I aim to apply my knowledge and experience in opportunities that
+            support professional growth and organizational success.
+          </p>
+
+          <div class="highlight-note">
+            "Committed to learning, serving with integrity, and delivering
+            organized and reliable work."
+          </div>
+
+        </div>
+
+      </div>
+
+    </section>
+
+    <!-- =================================
+         WORK EXPERIENCE SECTION
+    ================================== -->
+
+    <section class="section experience-section" id="experience">
+
+      <div class="container">
+
+        <p class="section-label">My Professional Journey</p>
+
+        <h2 class="section-title">Work Experience</h2>
+
+        <p class="section-intro">
+          Practical administrative experience gained through student
+          employment and departmental support at USJ-R.
+        </p>
+
+        <article class="experience-card">
+
+          <div class="experience-header">
+
+            <div>
+              <h3>READS Scholar</h3>
+
+              <p>
+                Recoletos Educational Assistance for Deserving Students
+              </p>
+
+              <p>
+                University of San Jose–Recoletos (USJ-R)
+              </p>
+            </div>
+
+            <span class="date-tag">2023 – Present</span>
+
+          </div>
+
+          <div class="experience-groups">
+
+            <div class="experience-group">
+              <h4>01. Administrative Support</h4>
+
+              <ul>
+                <li>
+                  Maintain departmental documents and confidential faculty
+                  201 files with proper organization and discretion.
+                </li>
+
+                <li>
+                  Organize supporting documents for PAASCU accreditation
+                  requirements and departmental administrative needs.
+                </li>
+
+                <li>
+                  Process office supply requisitions, liquidation documents,
+                  fund requests, and equipment turnover records.
+                </li>
+
+                <li>
+                  Maintain Google Drive files and manage Gmail correspondence
+                  for organized and accessible records.
+                </li>
+
+                <li>
+                  Record and schedule student, organization, and school
+                  activities through the designated online platform.
+                </li>
+              </ul>
+            </div>
+
+            <div class="experience-group">
+              <h4>02. Faculty & Student Assistance</h4>
+
+              <ul>
+                <li>
+                  Assist faculty with printing materials, classroom equipment,
+                  projectors, and sound system arrangements.
+                </li>
+
+                <li>
+                  Respond to student and organization inquiries and assist
+                  with overload applications, excuse slips, and correspondence.
+                </li>
+
+                <li>
+                  Prepare, process, and file departmental letters and
+                  student-related documents.
+                </li>
+
+                <li>
+                  Coordinate with faculty, students, and organizations to
+                  support smooth departmental operations.
+                </li>
+              </ul>
+            </div>
+
+            <div class="experience-group">
+              <h4>03. Event Coordination</h4>
+
+              <ul>
+                <li>
+                  Provide administrative and logistical support for SBM Week,
+                  Intramurals, and other school activities.
+                </li>
+
+                <li>
+                  Prepare event documents and certificates, reserve venues,
+                  and process guest entry permits.
+                </li>
+
+                <li>
+                  Create program flows and presentation materials for school
+                  events and activities.
+                </li>
+
+                <li>
+                  Assist with food distribution, event preparation, and
+                  graduation program distribution.
+                </li>
+              </ul>
+            </div>
+
+            <div class="experience-group">
+              <h4>04. Organization & Documentation</h4>
+
+              <ul>
+                <li>
+                  Keep records organized and ensure documents are properly
+                  prepared for submission.
+                </li>
+
+                <li>
+                  Help coordinate schedules, requirements, and deadlines
+                  across departmental activities.
+                </li>
+
+                <li>
+                  Collaborate with fellow READS Scholars to complete
+                  assigned tasks efficiently.
+                </li>
+
+                <li>
+                  Maintain attention to detail and confidentiality when
+                  handling administrative information.
+                </li>
+              </ul>
+            </div>
+
+          </div>
+
+        </article>
+
+      </div>
+
+    </section>
+
+    <!-- =================================
+         EDUCATION SECTION
+    ================================== -->
+
+    <section class="section" id="education">
+
+      <div class="container">
+
+        <p class="section-label">Academic Background</p>
+
+        <h2 class="section-title">Education & Achievements</h2>
+
+        <p class="section-intro">
+          My academic journey reflects a commitment to learning and
+          maintaining strong academic performance.
+        </p>
+
+        <div class="education-grid">
+
+          <article class="education-card">
+
+            <div class="education-icon" aria-hidden="true">◇</div>
+
+            <p class="year">2024 – PRESENT</p>
+
+            <h3>University of San Jose–Recoletos</h3>
+
+            <p>
+              Bachelor of Science in Business Administration
+            </p>
+
+            <p>Major in Financial Management</p>
+
+            <div class="achievement">
+              Academic Recognition
+
+              <p>
+                Dean's Lister — First and Second Semesters,
+                S.Y. 2024–2025
+              </p>
+
+              <p>
+                Dean's Lister — First Semester,
+                S.Y. 2025–2026
+              </p>
+            </div>
+
+          </article>
+
+          <article class="education-card">
+
+            <div class="education-icon" aria-hidden="true">✧</div>
+
+            <p class="year">2021 – 2023</p>
+
+            <h3>Cebu Mary Immaculate College</h3>
+
+            <p>Senior High School</p>
+
+            <p>
+              Science, Technology, Engineering, and Mathematics (STEM) Strand
+            </p>
+
+            <div class="achievement">
+              Academic Recognition
+
+              <p>Graduated with Honors</p>
+            </div>
+
+          </article>
+
+        </div>
+
+      </div>
+
+    </section>
+
+    <!-- =================================
+         SKILLS SECTION
+    ================================== -->
+
+    <section class="section skills-section" id="skills">
+
+      <div class="container">
+
+        <p class="section-label">What I Bring to the Table</p>
+
+        <h2 class="section-title">Skills & Competencies</h2>
+
+        <p class="section-intro">
+          A combination of administrative, technical, communication, and
+          organizational skills developed through academic and departmental
+          responsibilities.
+        </p>
+
+        <div class="skills-grid">
+
+          <article class="skill-card">
+            <p class="skill-number">01 / ADMINISTRATION</p>
+            <h3>Office Management</h3>
+
+            <ul>
+              <li>Document management and filing</li>
+              <li>Administrative and clerical support</li>
+              <li>Office supply requisitions</li>
+              <li>Fund request and liquidation processing</li>
+              <li>Confidential records handling</li>
+            </ul>
+          </article>
+
+          <article class="skill-card">
+            <p class="skill-number">02 / DIGITAL TOOLS</p>
+            <h3>Technical Skills</h3>
+
+            <ul>
+              <li>Microsoft Word</li>
+              <li>Microsoft Excel</li>
+              <li>Microsoft PowerPoint</li>
+              <li>Google Drive and Google Workspace</li>
+              <li>Gmail and email correspondence</li>
+              <li>Canva</li>
+            </ul>
+          </article>
+
+          <article class="skill-card">
+            <p class="skill-number">03 / COORDINATION</p>
+            <h3>Planning & Organization</h3>
+
+            <ul>
+              <li>Calendar and schedule management</li>
+              <li>Event coordination</li>
+              <li>Presentation and certificate design</li>
+              <li>Event program preparation</li>
+              <li>Records and documentation</li>
+            </ul>
+          </article>
+
+          <article class="skill-card">
+            <p class="skill-number">04 / COMMUNICATION</p>
+            <h3>People Skills</h3>
+
+            <ul>
+              <li>Customer service and inquiry assistance</li>
+              <li>Written communication</li>
+              <li>Teamwork and collaboration</li>
+              <li>Professional correspondence</li>
+              <li>Faculty and student assistance</li>
+            </ul>
+          </article>
+
+          <article class="skill-card">
+            <p class="skill-number">05 / PERSONAL</p>
+            <h3>Work Habits</h3>
+
+            <ul>
+              <li>Attention to detail</li>
+              <li>Time management</li>
+              <li>Multitasking</li>
+              <li>Organized and systematic</li>
+              <li>Problem solving and adaptability</li>
+              <li>Willingness to learn</li>
+            </ul>
+          </article>
+
+          <article class="skill-card">
+            <p class="skill-number">06 / PROFESSIONALISM</p>
+            <h3>Workplace Values</h3>
+
+            <ul>
+              <li>Confidentiality and discretion</li>
+              <li>Accountability</li>
+              <li>Reliability</li>
+              <li>Cooperation</li>
+              <li>Commitment to quality work</li>
+            </ul>
+          </article>
+
+        </div>
+
+      </div>
+
+    </section>
+
+    <!-- =================================
+         CONTACT SECTION
+    ================================== -->
+
+    <section class="section" id="contact">
+
+      <div class="container">
+
+        <p class="section-label">Let's Connect</p>
+
+        <h2 class="section-title">Contact Me</h2>
+
+        <p class="section-intro">
+          For professional opportunities, academic collaborations, or
+          inquiries, you may reach me through the contact details below.
+        </p>
+
+        <div class="contact-wrap">
+
+          <div>
+
+            <h3>Get in Touch</h3>
+
+            <p>
+              I welcome opportunities to learn, contribute, and grow
+              professionally.
+            </p>
+
+            <div class="contact-item">
+              <small>Email</small>
+
+              <a href="mailto:bernadeth.cornelio.23@usjr.edu.ph">
+                bernadeth.cornelio.23@usjr.edu.ph
+              </a>
+            </div>
+
+            <div class="contact-item">
+              <small>Phone</small>
+
+              <a href="tel:+639945795509">09945795509</a>
+            </div>
+
+            <div class="contact-item">
+              <small>Location</small>
+
+              <span>Bacayan, Cebu City, 6000, Philippines</span>
+            </div>
+
+          </div>
+
+          <div class="contact-cta">
+
+            <p class="section-label">Professional Opportunities</p>
+
+            <h3>Let's start a conversation.</h3>
+
+            <p>
+              Feel free to send an email for inquiries or opportunities
+              that align with my academic background and skills.
+            </p>
+
+            <a
+              class="btn btn-gold"
+              href="mailto:bernadeth.cornelio.23@usjr.edu.ph?subject=Professional%20Inquiry">
+
+              Send Me an Email →
+            </a>
+
+          </div>
+
+        </div>
+
+      </div>
+
+    </section>
+
+  </main>
+
+  <!-- =================================
+       FOOTER
+  ================================== -->
+
+  <footer>
+
+    <div class="container footer-content">
+
+      <p>
+        © <span id="currentYear"></span>
+        <strong>Bernadeth M. Cornelio</strong>
+      </p>
+
+      <p>
+        Personal Portfolio · Designed with purpose and professionalism
+      </p>
+
+    </div>
+
+  </footer>
+
+  <!-- =================================
+       JAVASCRIPT
+  ================================== -->
+
+  <script>
+    // Mobile navigation menu
+    const menuToggle = document.getElementById("menuToggle");
+    const navLinks = document.getElementById("navLinks");
+
+    menuToggle.addEventListener("click", () => {
+      const isOpen = navLinks.classList.toggle("open");
+
+      menuToggle.setAttribute(
+        "aria-expanded",
+        String(isOpen)
+      );
+
+      menuToggle.setAttribute(
+        "aria-label",
+        isOpen
+          ? "Close navigation menu"
+          : "Open navigation menu"
+      );
+
+      menuToggle.textContent = isOpen ? "✕" : "☰";
+    });
+
+    // Close menu after selecting a section
+    document.querySelectorAll("#navLinks a").forEach(link => {
+      link.addEventListener("click", () => {
+        navLinks.classList.remove("open");
+
+        menuToggle.setAttribute("aria-expanded", "false");
+        menuToggle.setAttribute(
+          "aria-label",
+          "Open navigation menu"
+        );
+
+        menuToggle.textContent = "☰";
+      });
+    });
+
+    // Automatically update the copyright year
+    document.getElementById("currentYear").textContent =
+      new Date().getFullYear();
+  </script>
+
+</body>
+</html>
